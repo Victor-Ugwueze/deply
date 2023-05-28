@@ -20,7 +20,18 @@ services:
     ports:
       - 5001:5001
     depends_on:
-      - db 
+      - db
+
+  ngginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    depends_on:
+      - address-service
+      - user-service
+
   db:
     image: postgres:latest
     environment:
