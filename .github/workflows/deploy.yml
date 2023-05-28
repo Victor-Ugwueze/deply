@@ -17,7 +17,7 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.Flask_deply_DO }}
+          key: ${{ secrets.KEY }}
           script: |
             cd /home/vic/backend
             ./restart.sh
