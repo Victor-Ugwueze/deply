@@ -33,7 +33,7 @@ services:
       - address-service
       - user-service
     volumes:
-      - /private/var/services/ugwueze.dev/nginx/letsencrypt:/etc/letsencrypt
+      - /etc/letsencrypt:/etc/letsencrypt
 
   db:
     image: postgres:latest
