@@ -32,6 +32,8 @@ services:
     depends_on:
       - address-service
       - user-service
+    volumes:
+      - /private/var/services/ugwueze.dev/nginx/letsencrypt:/etc/letsencrypt
 
   db:
     image: postgres:latest
